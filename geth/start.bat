@@ -1,0 +1,1 @@
+geth --ethash.dagdir dag --datadir ethereum --rpc --rpcapi db,net,web3,personal,eth,miner --rpcaddr localhost --rpccorsdomain "*" console

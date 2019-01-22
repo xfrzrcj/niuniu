@@ -1,0 +1,22 @@
+
+
+.players{
+	margin: auto;
+	width: 600px;
+}
+.player{
+	height:160;
+	text-align: left;
+}
+#room{
+	text-align: left;
+}
+.buttonDiv{
+	text-align: center;
+}
+button{
+	width:80px;
+}
+.onclick{
+	outline-style:dotted;
+}

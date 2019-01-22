@@ -1,0 +1,66 @@
+﻿<html>
+ <head> 
+  <link rel="stylesheet" href="css/index.css" /> 
+ </head> 
+ <body> 
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	</head>
+  <div class="center"> 
+  <script type="text/javascript" src="./js/aes.js"></script>
+  <script type="text/javascript" src="./js/base64.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"> </script>
+  <script src="./js/web3.js"></script>
+  <script type="text/javascript" src="./js/index.js"> </script>
+  <div class="players">
+  <div class="account"> 请选择账户：
+    <select name="account" id = "account">
+	  <option value="0" selected >Volvo</option>
+    </select>
+  </div>
+  <div class="contract"> 请输入合约地址：
+    <input id = "contract"></input>
+  </div>
+  <div id="room">状态：<a id="state">待机</a></div>
+   <div class="player" id="player_A">
+     <a>player A: </a>
+	<img src="images/eback.jpg" valign="bottom"/> 
+    <img src="images/eback.jpg" valign="bottom"/> 
+    <img src="images/eback.jpg" valign="bottom"/> 
+    <img src="images/eback.jpg" valign="bottom"/> 
+    <img src="images/eback.jpg" valign="bottom"/> 
+   </div> 
+   <div class="player" id="player_U">
+     <a>player U: </a> 
+    <img src="images/eback.jpg" valign="bottom"/> 
+    <img src="images/eback.jpg" valign="bottom"/> 
+    <img src="images/eback.jpg" valign="bottom"/> 
+    <img src="images/eback.jpg" valign="bottom"/> 
+    <img src="images/eback.jpg" valign="bottom"/> 
+   </div> 
+   
+   <div class="buttonDiv">
+	<button id="check" onclick="checkIn()">加入房间</button>
+	<button id="bid" onclick="bidHogs()">抢庄</button>
+	<button id="qp" onclick="setPQ()">选择PQ</button>
+	<button id="shuffle" onclick="shuffle()">洗牌</button>
+	<button id="encryptKey" onclick="encryptKey()">加密</button>
+	<button id="bid" onclick="uploadKey()">上传秘钥</button></br></br>
+	<div>点击牌面选择3张牌组成10的倍数</div>
+	<button id="WuXiaoNiu" onclick="wxn()">五小牛</button>
+	<button id="WuHauNiu" onclick="whn()">五花牛</button>
+	<button id="YouNiu" onclick="niu()">有牛</button>
+	<button id="MeiNiu" onclick="mn()">没牛</button>
+	</div>
+	<div>庄家：<a id="banker"></a></div>
+	<div>顺序：<a id="order"></a></div>
+	<div>选定的Q,P：<a id="pq"></a></div>
+	<div>第一轮洗牌秘钥：<a id="oneKey"></a></div>
+	<div>第二轮加密秘钥：<a id="twoKeys"></a></div>
+	<div>收到密文数据：<a id="message"></a></div>
+	<div>解密数据：<a id="decodeMsg"></a></div>
+   </div>
+  </div> 
+<script>showAccounts();</script>
+ </body>
+</html>
